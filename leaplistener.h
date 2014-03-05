@@ -42,10 +42,10 @@ class LeapListener : public Listener {
 
 	private:
 		int arduino_fd; //we need to store the fd here cuz we cant write to it otherwise
-		int numFrames; //count so we dont write to arduino every frame
 
 		/* helper function to write to Arduino */
 		bool writeArduino(uint8_t val, uint8_t s);
+		uint8_t demo(int name, const Frame frame);
 };
 
 #endif
